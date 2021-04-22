@@ -1,9 +1,9 @@
 
-am=0.5
-xo=0
-yo=0
+m=0.5
+b=0
+c=0
 f=3
-an=0
+n=0
 
 set isosamples 80
 set samples 40
@@ -21,4 +21,4 @@ set ytics 2
 set ztics 5
 
 set contour
-splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
+splot (m*sin(sqrt((x-b)**2+(y+c)**2)*f-n))+(m*sin(sqrt((x+b)**2+(y+c)**2)*f-n))
