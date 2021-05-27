@@ -1,10 +1,9 @@
-// do not write in //
-am = ampliture
-xo = x offset
-yo = y offset
-f = frequency
-an = animation
-// do not write in //
+# am = ampliture
+# xo = x offset
+# yo = y offset
+# f = frequency
+# an = animation
+
 
 am=0.5
 xo=0
