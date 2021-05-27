@@ -1,9 +1,16 @@
+// do not write in //
+am = ampliture
+xo = x offset
+yo = y offset
+f = frequency
+an = animation
+// do not write in //
 
-m=0.5
-b=0
-c=0
+am=0.5
+xo=0
+yo=0
 f=3
-n=0
+an=0
 
 set isosamples 80
 set samples 40
@@ -14,11 +21,11 @@ set ylabel "Y axis"
 set zlabel "Z" offset 1, 0
 set view 60, 30, 0.85, 1.1
 set key at screen 1.0, 0.9
-set title "Wave Formation in a Fabric"
+set title "Wave formation in fabric"
 
-set xtics 2
 set ytics 2
+set xtics 2
 set ztics 5
 
 set contour
-splot (m*sin(sqrt((x-b)**2+(y+c)**2)*f-n))+(m*sin(sqrt((x+b)**2+(y+c)**2)*f-n))
+splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f+an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f+an))
