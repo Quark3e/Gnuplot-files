@@ -41,11 +41,11 @@ splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)
 
 
 # {"Double slit experiment" wave positioning
-# am=0.5
-# xo=3
-# yo=-10
-# f=3
-# an=0
+am=0.5
+xo=3
+yo=-10
+f=3
+an=0
 # }
 
 
@@ -56,3 +56,11 @@ splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)
 # set output "[name of file.gif]"
 # do for [i=1:96] { splot f(x,y,i*0.1) }
 # }
+
+# example
+cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
+f(x,y,an)=(am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
+set terminal gif animate delay 4
+set output "Double slit experiment 2.gif"
+do for [i=1:96] { splot f(x,y,i)}
+#
