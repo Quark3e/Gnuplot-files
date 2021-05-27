@@ -1,19 +1,19 @@
 
 
 
-{Wave function
+# {Wave function
 
-splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f+an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f+an))
+# splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f+an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f+an))
 
-[if a correct water wave is to be formed, the formula needs to change +an to -an]
+# [if a correct water wave is to be formed, the formula needs to change +an to -an]
 
-am = amplitude
-xo = x offset
-yo = y offset
-f = frequency
-an = animation
+# am = amplitude
+# xo = x offset
+# yo = y offset
+# f = frequency
+# an = animation
 
-[an example]
+# [an example]
 am=0.5
 xo=0
 yo=0
@@ -37,22 +37,22 @@ set ztics 5
 
 set contour
 splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
-}
+# }
 
 
-{"Double slit experiment" wave positioning
-am=0.5
-xo=3
-yo=-10
-f=3
-an=0
-}
+# {"Double slit experiment" wave positioning
+# am=0.5
+# xo=3
+# yo=-10
+# f=3
+# an=0
+# }
 
 
-{Creating a gif file
-cd '[folder direciton]'
-f(x,y,[the changing variable])=[the 3D function]
-set terminal gif animate delay 4
-set output "[name of file.gif]"
-do for [i=1:96] { splot f(x,y,i*0.1) }
-}
+# {Creating a gif file
+# cd '[folder direciton]'
+# f(x,y,[the changing variable])=[the 3D function]        
+# set terminal gif animate delay 4
+# set output "[name of file.gif]"
+# do for [i=1:96] { splot f(x,y,i*0.1) }
+# }
