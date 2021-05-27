@@ -62,5 +62,5 @@ cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
 f(x,y,an)=(am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
 set terminal gif animate delay 4
 set output "Double slit experiment 2.gif"
-do for [i=1:96] { splot f(x,y,i)}
+do for [i=1:96] { splot f(x,y,i*0.1)}
 #
