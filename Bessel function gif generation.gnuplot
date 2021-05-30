@@ -37,6 +37,8 @@ n = 6 # number of zeros
 k = (n*pi-1.0/4*pi)
 u_0 = k + 1/(8*k) - 31/(384*k)**3 + 3779/(15360*k)**5
 
+# splot u*sin(v),u*cos(v),bessel(u,t)
+
 t = 0
 
 # range settings
@@ -59,16 +61,16 @@ set ztics 5
 
 set isosamples 200,100
 set pm3d depthorder
-set view 40, 225, 0.7, 0.4
+set view 48, 198, 0.7, 0.4
 
 splot u*sin(v),u*cos(v),bessel(u,t)
 
 
 # convert to gif
-cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs\Bessel function'
-set terminal gif animate delay 6
-set output "Manual bessel function 6.gif"
-do for [t=0:100:1] { splot u*sin(v),u*cos(v),bessel(u,t*0.01) w pm3d ls 1}; set terminal window; t=0; replot;
+# cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs\Bessel function'
+# set terminal gif animate delay 6
+# set output "Manual bessel function 10.gif"
+# do for [t=0:100:1] { splot u*sin(v),u*cos(v),bessel(u,t*0.01) w pm3d ls 1}; set terminal window; t=0; replot;
 # to change it's rotation, it's scale needs to be between 0 and 360, where 50 = 360 and 0 = 0. 7.2t.
 
 
