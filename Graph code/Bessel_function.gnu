@@ -66,7 +66,7 @@ set view 48, 198, 0.7, 0.4
 splot u*sin(v),u*cos(v),bessel(u,t)
 
 
-# convert to gif
+# convert to gif 
 # cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs\Bessel function'
 # set terminal gif animate delay 6
 # set output "Manual bessel function 10.gif"
