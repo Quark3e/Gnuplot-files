@@ -39,18 +39,23 @@ plot x**3-2*x**2+2
 
 # to animate column resolution value
 
+nresmax = 64  #make sure this is divisible by nres
+
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
-set terminal gif animate delay 25
-set output "Column demonstration animation11.gif"
-do for [nres=4:60] {
+set terminal gif animate delay 8
+set output "Column demonstration animation12.gif"
+do for [nres = 4:nresmax] {
     xwidth = xbase/nres
-    do for [n=1:nres] {
-        counter = x1 + xwidth*n
-        set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"
-        n=n+1
-        }
-    LABEL = "Number of Columns ".nres
-    set label 10 at -1,2.5 LABEL front center
-    plot x**3-2*x**2+2
+        do for [n = 1:nres] {
+            counter = x1 + xwidth*n
+            set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"
+            n=n+1
+            pause 0.1
+            }
+        LABEL = "Number of Columns ".nres
+        set label 10 at -1,2.5 LABEL front center
+
+        plot x**3-2*x**2+2
     }
 set terminal window; replot
+
