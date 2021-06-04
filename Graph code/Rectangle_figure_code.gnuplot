@@ -31,7 +31,7 @@ set obj 9 rect from -4, -4 to -4, -3 fc lt -1
 
 set obj 20 rect from graph 0, graph 0 to graph 1, graph 1 fs solid 0.15 fc rgb "#FFD700" behind
 
-set xrange [5:-5]
+set xrange [-5:5]
 
 plot x, -3+sin(x*5)/x lt 3 lw 3
 
