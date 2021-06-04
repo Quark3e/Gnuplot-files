@@ -40,8 +40,8 @@ plot x**3-2*x**2+2
 # to animate column resolution value
 
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
-set terminal gif animate delay 16
-set output "Column demonstration animation1.gif"
+set terminal gif animate delay 25
+set output "Column demonstration animation11.gif"
 do for [nres=4:60] {
     xwidth = xbase/nres
     do for [n=1:nres] {
