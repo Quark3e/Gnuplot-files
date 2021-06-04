@@ -25,6 +25,11 @@ do for [n=1:nres] {
     set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"
 }
 
+LABEL = "Number of Columns ".nres
+set obj 10 rect at -1,2.5 size char strlen(LABEL), char 1 
+set obj 10 fillstyle empty border -1 front
+set label 10 at -1,2.5 LABEL front center
+
 # load 'column_crafter.plt'
 
 # plotting
@@ -44,7 +49,8 @@ do for [nres=4:60] {
         set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"
         n=n+1
         }
-    
+    LABEL = "Number of Columns ".nres
+    set label 10 at -1,2.5 LABEL front center
     plot x**3-2*x**2+2
     }
 set terminal window; replot
