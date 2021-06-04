@@ -22,7 +22,7 @@ set title "Integral area representation"
 # cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
 # set terminal gif animate delay 4
 # set output "Column demonstration animation1.gif"
-# do for [nres=4:100] { do for [n=1:nres] { counter = x1 + xwidth*n; set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"; n=n+1}; plot f(x); pause 1}; set terminal window; replot
+# do for [nres=4:60] { xwidth = xbase/nres; do for [n=1:nres] { counter = x1 + xwidth*n; set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"; n=n+1}; plot x**3-2*x**2+2; pause 20}; set terminal window; replot
 
 # plot preparation
 
@@ -35,6 +35,6 @@ do for [n=1:nres] {
 
 # plotting
 
-plot f(x)
+plot x**3-2*x**2+2
 
 
