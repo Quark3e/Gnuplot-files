@@ -8,8 +8,7 @@ x2 = 1.5
 
 # definitions
 n = 1
-i = x1
-nres = 100
+nres = 4
 xbase = x2 - x1
 xwidth = xbase/nres
 counter = x1 + xwidth*i
@@ -17,12 +16,13 @@ counter = x1 + xwidth*i
 # labeling/details
 set xrange [-2:2]
 set yrange [0:3]
+set title "Integral area representation"
 
-# to animate res value
-# do for
-#
-#
-
+# to animate column resolution value
+# cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
+# set terminal gif animate delay 4
+# set output "Column demonstration animation1.gif"
+# do for [nres=4:100] { do for [n=1:nres] { counter = x1 + xwidth*n; set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple"; n=n+1}; plot f(x); pause 1}; set terminal window; replot
 
 # plot preparation
 
