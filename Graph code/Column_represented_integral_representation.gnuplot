@@ -13,7 +13,7 @@ nres = 3
 nresmax = 80
 xbase = x2 - x1
 xwidth = xbase/nres
-counter = x1 + xwidth*i
+counter = x1 + xwidth*n
 
 RealIntegralValue = F(x2) - F(x1)
 
