@@ -9,11 +9,12 @@ x2 = 1.5
 
 # definitions
 n = 1
-nres = 3
+nres = 1
 nresmax = 80
 xbase = x2 - x1
 xwidth = xbase/nres
 counter = x1 + xwidth*n
+GifDelay = 1
 
 RealIntegralValue = F(x2) - F(x1)
 
@@ -58,29 +59,30 @@ plot x**3-2*x**2+2
 
 
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
-set terminal gif animate delay 16
-set output "Column demonstration animation15.gif"
-do for [nres = 4:nresmax] {
+set terminal gif animate delay GifDelay
+set output "Column demonstration animation20.gif"
+do for [nresval = nres:nresmax] {
     TotalArea = 0.000
-    xwidth = xbase/nres
-        do for [n = 1:nres] {
+    xwidth = xbase/nresval
+        do for [n = 1:nresval] {
             counter = x1 + xwidth*n
             set obj n rect from (counter-xwidth),f(counter-xwidth) to counter,0 fc rgb "purple";
 
             area(n) = xwidth * f(counter-xwidth)
-
             TotalArea = TotalArea + area(n)
 
             n = n + 1
             }
-
         TotalAreaText = round2(TotalArea, 4)
         RealIntegral = round2(RealIntegralValue, 4)
-
-        set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
+        set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nresval)
         set label 1 at -1.1,2.75 front center
 
         plot x**3-2*x**2+2
+
+        if (nresval != nresmax) {
+            do for [i=0:(round(nresmax-nresval)/30)**2] {plot x**3-2*x**2+2}
+        }
     }
-set terminal window; replot
+set terminal qt; replot
 
