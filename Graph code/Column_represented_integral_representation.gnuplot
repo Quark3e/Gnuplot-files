@@ -42,8 +42,8 @@ do for [n=1:nres] {
 TotalAreaText = round2(TotalArea, 4)
 RealIntegral = round2(RealIntegralValue, 4)
 
-set label 2 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
-set label 2 at -1.1,2.75 front center
+set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
+set label 1 at -1.1,2.75 front center
 
 #set obj 10 rect at -1,2.5 size char strlen(LABEL), char 1 
 #set obj 10 fillstyle empty border -1 front
@@ -77,8 +77,8 @@ do for [nres = 4:nresmax] {
         TotalAreaText = round2(TotalArea, 4)
         RealIntegral = round2(RealIntegralValue, 4)
 
-        set label 2 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
-        set label 2 at -1.1,2.75 front center
+        set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
+        set label 1 at -1.1,2.75 front center
 
         plot x**3-2*x**2+2
     }
