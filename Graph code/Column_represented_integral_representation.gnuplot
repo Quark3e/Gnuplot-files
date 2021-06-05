@@ -60,7 +60,7 @@ plot x**3-2*x**2+2
 nresmax = 64  #make sure this is divisible by nres
 
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
-set terminal gif animate delay 8
+set terminal gif animate delay 16
 set output "Column demonstration animation13.gif"
 do for [nres = 4:nresmax] {
     TotalArea = 0.000
