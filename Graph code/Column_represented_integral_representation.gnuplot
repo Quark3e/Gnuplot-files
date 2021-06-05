@@ -10,7 +10,7 @@ x2 = 1.5
 # definitions
 n = 1
 nres = 1
-nresmax = 80
+nresmax = 90
 xbase = x2 - x1
 xwidth = xbase/nres
 counter = x1 + xwidth*n
@@ -58,9 +58,9 @@ plot x**3-2*x**2+2
 
 
 
-cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
+cd 'C:\Users\aa82637\Desktop\Github repository folder\Github main content repo\Github-directory\Gnuplot-files\Graph code\Column Integral visualation gifs'
 set terminal gif animate delay GifDelay
-set output "Column demonstration animation20.gif"
+set output "Column demonstration animation21.gif"
 do for [nresval = nres:nresmax] {
     TotalArea = 0.000
     xwidth = xbase/nresval
