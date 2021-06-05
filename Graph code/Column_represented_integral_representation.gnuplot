@@ -40,16 +40,13 @@ do for [n=1:nres] {
 }
 
 TotalAreaText = round2(TotalArea, 4)
-set label 2 sprintf('Area of Columns: %.3f', TotalAreaText) at -1.21,2 front center
 RealIntegral = round2(RealIntegralValue, 4)
-set label 3 sprintf('Actual Integral Value: %.3f', RealIntegral) at -1.11,2.25 front center
 
-LABEL2 = "Number of Columns: ".nres
+set label 2 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
+set label 2 at -1.1,2.75 front center
+
 #set obj 10 rect at -1,2.5 size char strlen(LABEL), char 1 
 #set obj 10 fillstyle empty border -1 front
-set label 1 at -1.25,2.5 LABEL2 front center
-
-# load 'column_crafter.plt'
 
 # plotting
 
@@ -62,7 +59,7 @@ plot x**3-2*x**2+2
 
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
 set terminal gif animate delay 16
-set output "Column demonstration animation14.gif"
+set output "Column demonstration animation15.gif"
 do for [nres = 4:nresmax] {
     TotalArea = 0.000
     xwidth = xbase/nres
@@ -77,10 +74,11 @@ do for [nres = 4:nresmax] {
             n = n + 1
             }
 
-        LABEL2 = "Number of Columns: ".nres
-        set label 1 at -1.25,2.5 LABEL2 front center; if (nres>9) {set label 1 at -1.22,2.5}
         TotalAreaText = round2(TotalArea, 4)
-        set label 2 sprintf('Area of Columns: %.3f', TotalAreaText) at -1.21,2 front center
+        RealIntegral = round2(RealIntegralValue, 4)
+
+        set label 2 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
+        set label 2 at -1.1,2.75 front center
 
         plot x**3-2*x**2+2
     }
