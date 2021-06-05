@@ -77,7 +77,7 @@ do for [nres = 4:nresmax] {
             }
 
         LABEL2 = "Number of Columns: ".nres
-        set label 1 at -1.25,2.5 LABEL2 front center; if (nres>9) {set label 1 at -1.23,2.5}
+        set label 1 at -1.25,2.5 LABEL2 front center; if (nres>9) {set label 1 at -1.22,2.5}
         TotalAreaText = round2(TotalArea, 4)
         set label 2 sprintf('Area of Columns: %.3f', TotalAreaText) at -1.21,2 front center
 
