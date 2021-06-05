@@ -10,6 +10,7 @@ x2 = 1.5
 # definitions
 n = 1
 nres = 3
+nresmax = 80
 xbase = x2 - x1
 xwidth = xbase/nres
 counter = x1 + xwidth*i
@@ -57,11 +58,11 @@ plot x**3-2*x**2+2
 
 # to animate column resolution value
 
-nresmax = 64  #make sure this is divisible by nres
+
 
 cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
 set terminal gif animate delay 16
-set output "Column demonstration animation13.gif"
+set output "Column demonstration animation14.gif"
 do for [nres = 4:nresmax] {
     TotalArea = 0.000
     xwidth = xbase/nres
