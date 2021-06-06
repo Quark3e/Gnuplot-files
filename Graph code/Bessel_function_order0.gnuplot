@@ -67,10 +67,10 @@ splot u*sin(v),u*cos(v),bessel(u,t)
 
 
 # convert to gif
-cd 'C:\Users\aa82637\Desktop\Github repository folder\Github main content repo\Github-directory\Gnuplot-files\Graph code\Bessel function gifs'
-set terminal gif animate delay 6
-set output "Manual bessel function 0th order.gif"
-do for [t=0:100:1] { splot u*sin(v),u*cos(v),bessel(u,t*0.01) w pm3d ls 1}; set terminal qt; t=0; replot;
+# cd 'C:\Users\aa82637\Desktop\Github repository folder\Github main content repo\Github-directory\Gnuplot-files\Graph code\Bessel function gifs'
+# set terminal gif animate delay 6
+# set output "Manual bessel function 0th order.gif"
+# do for [t=0:100:1] { splot u*sin(v),u*cos(v),bessel(u,t*0.01) w pm3d ls 1}; set terminal qt; t=0; replot;
 # to change it's rotation, it's scale needs to be between 0 and 360, where 50 = 360 and 0 = 0. 7.2t.
 
 
