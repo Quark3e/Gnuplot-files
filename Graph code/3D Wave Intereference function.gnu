@@ -64,10 +64,10 @@ an=0
 # }
 
 # example
-cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
-f(x,y,an)=(am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
-set terminal gif animate delay 4
-set output "Wave 2.gif"
-do for [i=1:96] { splot f(x,y,i*0.1) w pm3d 1s 1}; set terminal window; replot
+# cd 'C:\Users\aa82637\Videos\Gnuplot animation outputs'
+# f(x,y,an)=(am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
+# set terminal gif animate delay 4
+# set output "Wave 2.gif"
+# do for [i=1:96] { splot f(x,y,i*0.1) w pm3d 1s 1}; set terminal window; replot
 
 #example: do for [i=1:3600] { splot f(x,y,i*-0.3); set view 60, i*0.1, 0.85, 1.1;}; set terminal window; splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
