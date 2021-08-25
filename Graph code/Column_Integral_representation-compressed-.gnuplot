@@ -6,7 +6,7 @@ x1 = -0.5
 x2 = 1.5
 # definitions
 n = 1
-nres = 10
+nres = 3
 nresmax = 90
 xbase = x2 - x1
 xwidth = xbase/nres
