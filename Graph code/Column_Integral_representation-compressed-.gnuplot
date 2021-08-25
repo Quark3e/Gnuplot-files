@@ -3,10 +3,10 @@ f(x) = x**3-2*x**2+2
 F(x) = ((x**4)/4-(2*(x**3))/3+2*x)  #NOTE: Change primitive function if f(x) is changed
 # limits
 x1 = -0.5
-x2 = 1.5
+x2 = 0.5
 # definitions
 n = 1
-nres = 3
+nres = 4
 nresmax = 90
 xbase = x2 - x1
 xwidth = xbase/nres
