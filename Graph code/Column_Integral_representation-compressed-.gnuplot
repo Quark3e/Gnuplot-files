@@ -2,8 +2,8 @@
 f(x) = x**3-2*x**2+2
 F(x) = ((x**4)/4-(2*(x**3))/3+2*x)  #NOTE: Change primitive function if f(x) is changed
 # limits
-x1 = -0.5
-x2 = 1
+x1 = -1
+x2 = 2.5
 # definitions
 n = 1
 nres = 13
@@ -16,8 +16,8 @@ RealIntegralValue = F(x2) - F(x1)
 round(x) = x - floor(x) < 0.5? floor(x) : ceil(x)  #rounding the numbers
 round2(x, n) = round(x*10**n)*10.0**(-n)  #rounding the numbers with n decimals
 # labeling/details
-set xrange [-2:2]
-set yrange [0:3]
+set xrange [-2:4]
+set yrange [-2:4]
 set title "Integral area representation"
 set grid
 # plot preparation
@@ -32,8 +32,8 @@ do for [n=1:nres] {
 }
 TotalAreaText = round2(TotalArea, 4)
 RealIntegral = round2(RealIntegralValue, 4)
-set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.3f", TotalAreaText, RealIntegral, nres)
-set label 1 at -1.1,2.75 front center   
+set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.f", TotalAreaText, RealIntegral, nres)
+set label 1 at -0.8,3.5 front center   
 
 plot x**3-2*x**2+2
 
