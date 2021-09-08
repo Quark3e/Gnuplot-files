@@ -16,14 +16,14 @@
 # [an example]
 
 # constant definitions
-am=0.5
+am=0.25
 xo=0
 yo=0
 f=3
 an=0
 
 # details
-set isosamples 80
+set isosamples 50
 set samples 40
 set cntrparam levels 10
 
@@ -33,11 +33,11 @@ set contour
 set xlabel "X axis"
 set ylabel "Y axis"
 set zlabel "Z" offset 1, 0
-set view 60, 30, 0.85, 1.1
+set view 50, 40, 0.85, 1.1
 set key at screen 1.0, 0.9
 set title "Wave Formation in a Fabric"
 
-set xtics 2
+set xtics 
 set ytics 2
 set ztics 5
 
@@ -47,11 +47,11 @@ splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)
 
 
 # {"Double slit experiment" wave positioning
-am=0.5
-xo=3
-yo=-10
-f=3
-an=0
+# am=0.5
+# xo=3
+# yo=-10
+# f=3
+# an=0
 # }
 
 
@@ -68,6 +68,6 @@ an=0
 # f(x,y,an)=(am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
 # set terminal gif animate delay 4
 # set output "Wave 2.gif"
-# do for [i=1:96] { splot f(x,y,i*0.1) w pm3d 1s 1}; set terminal window; replot
+# do for [i=1:96] { splot f(x,y,i*0.1) w pm3d 1s 1}; set terminal qt; replot
 
 #example: do for [i=1:3600] { splot f(x,y,i*-0.3); set view 60, i*0.1, 0.85, 1.1;}; set terminal window; splot (am*sin(sqrt((x-xo)**2+(y+yo)**2)*f-an))+(am*sin(sqrt((x+xo)**2+(y+yo)**2)*f-an))
