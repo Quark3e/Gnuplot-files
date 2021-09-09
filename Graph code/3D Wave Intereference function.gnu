@@ -16,7 +16,7 @@
 # [an example]
 
 # constant definitions
-am=0.25
+am=0.55
 xo=0
 yo=0
 f=3
