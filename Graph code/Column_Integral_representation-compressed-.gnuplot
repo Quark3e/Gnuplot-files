@@ -2,11 +2,11 @@
 f(x) = x**3-2*x**2+2
 F(x) = ((x**4)/4-(2*(x**3))/3+2*x)  #NOTE: Change primitive function if f(x) is changed
 # limits
-x1 = -1
-x2 = 2.5
+x1 = 0
+x2 = 2.0
 # definitions
 n = 1
-nres = 13
+nres = 5
 nresmax = 90
 xbase = x2 - x1
 xwidth = xbase/nres
@@ -35,7 +35,7 @@ RealIntegral = round2(RealIntegralValue, 4)
 set label 1 sprintf("Area of Columns: %.3f\n \nActual Integral Value %.3f\n \nNumber of Columns: %.f", TotalAreaText, RealIntegral, nres)
 set label 1 at -0.8,3.5 front center   
 
-plot x**3-2*x**2+2
+plot f(x)
 
 # cd 'C:\Users\aa82637\Desktop\Github repository folder\Github main content repo\Github-directory\Gnuplot-files\Graph code\Column Integral visualation gifs'
 # set terminal gif animate delay GifDelay

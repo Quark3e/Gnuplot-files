@@ -18,7 +18,7 @@
 # constant definitions
 am=0.55
 xo=0
-yo=0
+yo=10
 f=3
 an=0
 
