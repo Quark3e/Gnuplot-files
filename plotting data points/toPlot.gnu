@@ -9,8 +9,10 @@ set xrange [-400:400]
 set yrange [0:400]
 set zrange [0: 540]
 
-set contour
-set view 30, 60, 1, 1
+# set contour
+set view 30, 30, 1.1, 1
+# set dgrid3d
+set grid
 
 splot "ws-list.dat"
 
