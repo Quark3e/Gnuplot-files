@@ -5,16 +5,22 @@ set ylabel "y -axis"
 set zlabel "z -axis"
 
 
+set ticslevel 0
 set xrange [-400:400]
 set yrange [0:400]
-set zrange [0: 540]
+set zrange [0:540]
+
 
 # set contour
 set view 45, 45, 1.1, 1
-set dgrid3d
-# set grid
+# set dgrid3d
+set grid
+set cntrparam
 
-splot "ws-list.dat"
+# set dgrid3d 30, 30
+
+
+splot "ws-top_z_val.dat"
 
 
 # do for [i=1:100] {
